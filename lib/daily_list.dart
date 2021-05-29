@@ -56,16 +56,8 @@ _selectDate(BuildContext context) async {
         lastDate: DateTime(2040),
         builder: (BuildContext context, Widget child) {
           return Theme(
-            data: ThemeData.dark().copyWith(
-              colorScheme: ColorScheme.dark(
-                primary: Colors.green[500],
-                onPrimary: Colors.white,
-                surface: Colors.green[500],
-                onSurface:Colors.white ,
-              ),
-              dialogBackgroundColor: Colors.blue[500],
-              
-            ),
+            data: ThemeData.light()
+,
             child: child,
           );
         });
@@ -285,7 +277,7 @@ _selectDate(BuildContext context) async {
                               TextField(
                                 focusNode: AlwaysDisabledFocusNode(),
                                 controller: _textEditingController,
-                                
+                                decoration: InputDecoration(hintText:"Lütfen Tarih seçiniz"),
                                 onTap: () {
                                   _selectDate(context);
                                 }

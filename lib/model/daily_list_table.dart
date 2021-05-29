@@ -42,6 +42,17 @@ void _getSelectedRowInfo() {
                   ),
                   onTap: _getSelectedRowInfo,
                 ),
+                DataCell(Center(
+                  child:Container(
+                    child: TextButton(
+                      style: ButtonStyle(
+                        foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
+                      ),
+                      onPressed: () { },
+                      child: Icon(Icons.bug_report,size: 21,color: Colors.red,),
+                    ),
+                  ),
+                )),
           ]
         )
       );
@@ -104,6 +115,16 @@ void _getSelectedRowInfo() {
           ), 
           numeric: false,
           tooltip: "Test",
+        ),
+        DataColumn(
+          label:Center(
+            child: Text(
+              '#',
+              style: TextStyle(fontStyle: FontStyle.italic),
+            ),
+          ), 
+          numeric: false,
+          tooltip: "#",
         ),
       ],
 
